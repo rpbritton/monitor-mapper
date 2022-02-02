@@ -1,0 +1,28 @@
+monitors:
+  internal:
+    edid: 00ffffffffffff0009e5
+  dell_up2516p:
+    edid: 00ffffffffffff0010ac
+  lenovo_g27q-20:
+    edid: 00ffffffffffff0030ae
+modes:
+  2560x1440_60:
+    width: 2560
+    height: 1440
+    line: 241.500 2560 2608 2640 2720 1440 1443 1448 1481 +hsync -vsync
+layouts:
+  skip: false
+  criteria:
+    monitors: { internal, dell_up2516p, lenovo_g27q-20 }
+  primary:
+    monitor: dell_up2516p
+    commands:
+  auxiliary:
+    - monitor: lenovo_g27q-20
+      position:
+        x: west - width
+        y: 0
+      commands:
+  default:
+    position:
+    commands:
